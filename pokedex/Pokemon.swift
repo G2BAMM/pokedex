@@ -180,6 +180,8 @@ class Pokemon{
                         
                     }
                 } //End of sub request
+                
+                //Now check our evolutions
                 if let evolutions = dict["evolutions"] as? [Dictionary<String, Any>], evolutions.count > 0{
                     if let nextEvo = evolutions[0]["to"] as? String{
                         if nextEvo.range(of: "mega") == nil{
