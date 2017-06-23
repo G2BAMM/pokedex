@@ -17,12 +17,16 @@ class PokeCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
-        layer.cornerRadius = 5.0    
+        //Set a curve on our collectionview cells
+        layer.cornerRadius = 5.0
     }
     
     func configureCell(pokemon: Pokemon){
+        //Set up our pokemon object
         self.pokemon = pokemon
+        //Update the pokemon name
         lblName.text = self.pokemon.name.capitalized
+        //Set the pokemon image
         self.imgThumb.image = UIImage(named: "\(self.pokemon.pokedexId)")
         
     }
